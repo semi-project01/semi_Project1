@@ -26,7 +26,7 @@ def desc():
                 이 때 streamlit은 아나콘다의 repository에 없어서 에러가 발생하므로 나중에 설치해 줍니다.
             ''')
     st.image('image\image02.png') #y누르는 부분
-    st.write(''''
+    st.write('''
             ### 4. 설치 완료
             
             conda activate semiproject : semiproject 가상환경을 실행합니다.
