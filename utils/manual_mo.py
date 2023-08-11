@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('streamlit manual')
-st.header('header입니다')
+
 def manual_():
     st.write('''
     1. streamlit 이란 
