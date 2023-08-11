@@ -20,30 +20,31 @@ def manual_():
     st.write('''
     3. 다양한 method
     - st.title() 텍스트를 타이틀로 출력.
-    ''')
+    ##### 예시)''')
     st.image('image/title.png')
     st.write('''
     - st.header() 텍스트를 헤더로 출력(타이틀보다 작음)
-    ''')
+    ##### 예시)''')
     st.image('image/header.png')
     st.write('''
     - st.write() 기본적인 텍스트르 작성해주는 method
     ''')
     st.write('''
     - st.text_input() 텍스트 입력필드를 생성하고 사용자의 입력을 받는 데 사용되는 기능 
-    ''')
+    ##### 예시)''')
     st.image('image/input.png')
     st.write('''
     - st.sidebar.selectbox() 화면측면에 체크박스를 생성
-    ''')
+    ##### 예시)''')
     st.image('image/side.png')
     st.write('''
     - st.button() 사용자가 클릭할 수 있는 버튼을 생성
-    ''')
+    ##### 예시)''')
     st.image('image/button.png')
     st.write('''
     - st.pyplot() matplotlib을 통해 생성된 그래프를 출력
     
     - st.dataframe() 데이터프레임을 불러오는 method
     ''')
+
 
