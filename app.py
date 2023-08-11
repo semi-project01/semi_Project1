@@ -17,7 +17,7 @@ item = st.sidebar.selectbox('항목을 골라요.', ['intro','목차', '가상�
 
 if item == 'intro':
     it.app()   
-elif item == '목차1':
+elif item == '목차':
     s1.app()   
     # 데이터프레임
     # 그래프 맵
