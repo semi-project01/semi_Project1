@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-
+import numpy as np
+import matplotlib.pyplot as plt
 
 def manual_():
     st.write('''
@@ -26,7 +27,7 @@ def manual_():
             ''') 
     st.write('''예시)''')
     st.title("Title")
-    
+    st.markdown('----')
     #st.header
     st.code('''
             • 텍스트를 헤더로 출력(타이틀보다 작음)
@@ -34,7 +35,7 @@ def manual_():
             ''') 
     st.write('''예시)''')
     st.title("Header")
-    
+    st.markdown('----')
     #st.write   
     st.code('''
             • 기본적인 텍스트르 작성해주는 method
@@ -42,29 +43,74 @@ def manual_():
             ''') 
     st.write('''예시)''')
     st.write('Hello world')
-    
-    # st.sidebar   
+    st.markdown('----')
+    # st.sidebar
     st.code('''
             • 웹페이지 왼쪽에 사이드바를 추가   
             - st.sidebar.selectbox('메뉴 선택하세요', ['선택1', '선택2','선택3'])
             - ( )안에 메뉴 상단 문구 작성, 희망 selectbox를 리스트 또는 튜플로 추가해주시면 됩니다.
             ''')
-     
+       
     st.write('''예시)''')
-    st.write('Hello world')
-    
-    st.write('''
-    - st.sidebar.selectbox() 화면측면에 체크박스를 생성
-    ##### 예시)''')
     st.image('image/side.png')
-    st.write('''
-    - st.button() 사용자가 클릭할 수 있는 버튼을 생성
-    ##### 예시)''')
-    st.image('image/button.png')
-    st.write('''
-    - st.pyplot() matplotlib을 통해 생성된 그래프를 출력
+    st.markdown('----')
+    #st.button
+    st.code('''
+            • 사용자가 클릭할 수 있는 버튼을 생성
+            - st.button('실행버튼')
+            ''') 
+    st.write('''예시)''')
+    st.button('실행버튼')
     
-    - st.dataframe() 데이터프레임을 불러오는 method
-    ''')
+    st.markdown('----')
+    #st.pyplot
+    st.code('''
+            • matplotlib을 통해 생성된 그래프를 출력
+            - st.pyplot()
+            ''') 
+    st.write('''예시)''')
+    st.code('''
+            df = pd.DataFrame(np.arange(15))
+            fig, ax = plt.subplots(figsize=(5, 5))
+            
+            ax.plot(df)
+            st.pyplot()
+            ''')
+    df = pd.DataFrame(np.arange(15))
+    fig, ax = plt.subplots(figsize=(5, 5))  # plt.subplots() 수정
+    ax.plot(df)
+    st.pyplot(fig)
 
+    st.markdown('----')
+    #dataframe
+    st.code('''
+            • 데이터프레임을 불러오는 method
+            - st.dataframe()
+            ''') 
+    st.write('''예시)''')
+    st.code('''
+            data = {
+                "이름": ["Alice", "Bob", "Charlie"],
+                "나이": [25, 30, 28],
+                "직업": ["개발자", "디자이너", "마케터"]
+                }
+            
+            df = pd.DataFrame(data)
+
+            st.dataframe(df)
+
+
+            ''') 
+    
+    data = {
+        "이름": ["Alice", "Bob", "Charlie"],
+        "나이": [25, 30, 28],
+        "직업": ["개발자", "디자이너", "마케터"]
+        }
+            
+    df = pd.DataFrame(data)
+      
+    st.dataframe(df)
+ 
+    
 
