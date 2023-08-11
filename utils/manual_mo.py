@@ -23,7 +23,7 @@ def manual_():
     ''')
     st.image('image/title.png')
     st.write('''
-    - st.header() )텍스트를 헤더로 출력(타이틀보다 작음)
+    - st.header() 텍스트를 헤더로 출력(타이틀보다 작음)
     ''')
     st.image('image/header.png')
     st.write('''
