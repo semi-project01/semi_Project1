@@ -19,4 +19,3 @@ def app():
     # 표에 스타일 적용하여 텍스트 크기 조절
     st.write('<style>th, td {font-size: 15px;}</style>', unsafe_allow_html=True)
     st.table(mem)
-    
