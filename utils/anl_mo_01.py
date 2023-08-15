@@ -5,7 +5,7 @@ import pandas as pd
 from matplotlib import font_manager, rc
 
 
-def total_anl():      
+def total_check():      
     df = pd.read_csv('./jeju_data.csv', sep=',', encoding='euc-kr')
     
     st.write('데이터 값을 확인해보겠습니다.')
@@ -122,6 +122,10 @@ def sort_data():
     df = pd.read_csv('./sort_new_jeju.csv')
     st.write(df.head())
     st.write(df.tail())
+    st.markdown('----')
+
+def total_check():
+    pass
 
 
 
