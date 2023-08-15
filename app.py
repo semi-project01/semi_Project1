@@ -11,7 +11,7 @@ from page import page_env as penv
 from page import manual_page as man
 
 
-item = st.sidebar.selectbox('항목을 골라요.', ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','선택3',] )
+item = st.sidebar.selectbox('항목을 골라요.', ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','프로젝트 diagram','조사목적', '분석 01','분석 02','분석 03','분석 04','분석 05','분석 06'] )
 
 
 
@@ -26,7 +26,19 @@ elif item == '가상환경 구축 매뉴얼':
 elif item == 'streamlit 매뉴얼':
     man.app()
 
-elif item == '선택3':
-    s3.app()
-    # streamlit_folium
-   
+elif item == '프로젝트 diagram':
+    pass
+elif item == '조사 목적':
+    pass
+elif item == '분석 01':
+    pass
+elif item == '분석 02':
+    pass
+elif item == '분석 03':
+    pass
+elif item == '분석 04':
+    pass
+elif item == '분석 05':
+    pass
+elif item == '분석 06':
+    pass
