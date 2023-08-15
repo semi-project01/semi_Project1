@@ -118,7 +118,7 @@ def sort_data():
             폭풍 (Storm) : 29  m/s 이상
              ''')
     
-    st.markdown('<span style= "font-size: 20px; font-weight: bold;">[새로운 CSV파일로 저장 후 ] </span>', unsafe_allow_html=True)  
+    st.markdown('<span style= "font-size: 20px; font-weight: bold;">[새로운 CSV파일로 저장 후] </span>', unsafe_allow_html=True)  
     df = pd.read_csv('./sort_new_jeju.csv')
     st.write(df.head())
     st.write(df.tail())
