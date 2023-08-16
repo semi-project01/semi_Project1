@@ -13,7 +13,7 @@ from page import anl_02 as a2
 from page import anl_03 as a3
 from page import anl_04 as a4
 from page import anl_05 as a5
-
+from page import anl_06 as a6
 
 item = st.sidebar.selectbox('항목을 골라요.', ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','프로젝트 diagram','조사목적', '분석 01 - 데이터 및 전체 매출 확인','분석 02','분석 03','분석 04','분석 05','분석 06'] )
 
@@ -44,5 +44,5 @@ elif item == '분석 04':
     a4.app()
 elif item == '분석 05':
     a5.app()
-# elif item == '분석 06':
-#     pass
+elif item == '분석 06':
+    a6.app()
