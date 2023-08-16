@@ -49,7 +49,7 @@ def create_temper_sales_graph(data, year):
         
     plt.figure(figsize=(12, 8))
     bar_width = 0.09
-    colors = ['black', 'orange', 'skyblue', 'mediumseagreen', 'yellow', 'blue', 'chocolate', 'orchid']
+    colors = ['skyblue', 'lightgreen', 'lightcoral', 'lightsalmon', 'lightgrey', 'aquamarine', 'orchid', 'chocolate']
 
     for i, industry in enumerate(industry_list):
         industry_data = temperature_sales[temperature_sales['업종_분류'] == industry]
@@ -66,7 +66,7 @@ def create_temper_sales_graph(data, year):
     plt.xticks(x, x_labels, fontproperties=fontprop)
 
     plt.xlabel('기온 범위', fontproperties=fontprop)
-    plt.ylabel('평균 매출액 (1억원)', fontproperties=fontprop)
+    plt.ylabel('평균 매출액 (단위: 1억원)', fontproperties=fontprop)
     plt.legend(prop=fontprop)
     plt.tight_layout()
 
@@ -77,7 +77,7 @@ def desc02():
     st.pyplot()
     st.write("2018년 데이터 표")
     # 업종별로 평균기온과 이용금액의 평균 계산
-    avg_temper_sales_2018 = selected_df_2018[selected_df_2018['업종_분류'].isin(industry_list)].groupby('업종_분류').agg({'평균 기온': lambda x: f'{x.mean():.2f}', '이용금액': lambda x: f'{x.mean():.2f}'}).reset_index()
+    avg_temper_sales_2018 = selected_df_2018[selected_df_2018['업종_분류'].isin(industry_list)].groupby('업종_분류').agg({'평균 기온': lambda x: f'{x.mean():.2f}', '이용금액': lambda x: f'{x.mean()/1e8:.2f} 억'}).reset_index()
     avg_temper_sales_2018.columns = ['업종_분류', '평균기온(평균)', '이용금액(평균)']
     st.dataframe(avg_temper_sales_2018, width=800)
 
@@ -86,7 +86,7 @@ def desc02():
     st.pyplot()
     st.write("2019년 데이터 표")
     # 업종별로 평균기온과 이용금액의 평균 계산
-    avg_temper_sales_2019 = selected_df_2019[selected_df_2019['업종_분류'].isin(industry_list)].groupby('업종_분류').agg({'평균 기온': lambda x: f'{x.mean():.2f}', '이용금액': lambda x: f'{x.mean():.2f}'}).reset_index()
+    avg_temper_sales_2019 = selected_df_2019[selected_df_2019['업종_분류'].isin(industry_list)].groupby('업종_분류').agg({'평균 기온': lambda x: f'{x.mean():.2f}', '이용금액': lambda x: f'{x.mean()/1e8:.2f} 억'}).reset_index()
     avg_temper_sales_2019.columns = ['업종_분류', '평균기온(평균)', '이용금액(평균)']
     st.dataframe(avg_temper_sales_2019, width=800)
     

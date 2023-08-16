@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 
-font_path = r'NanumGothic.ttf'
+font_path = 'C:/Windows/Fonts/NanumGothic.ttf'
 fontprop = font_manager.FontProperties(fname=font_path, size=10)
 
 name_list = ['한림읍', '애월읍', '제주시', '조천읍', '구좌읍', '성산읍', '표선면', '남원읍', '서귀포시',
@@ -47,7 +47,7 @@ def rain():
     # 일강수량에 따른 업종별 매출 변화 그래프 출력
     st.write(f'{option} - 일강수량에 따른 업종별 매출 변화')
     
-    # Sort the data based on custom order
+    # 일강수량으로 정렬
     selected_data['일강수량 정렬'] = pd.Categorical(selected_data['일강수량 정렬'], categories=rainfall_categories, ordered=True)
     selected_data = selected_data.sort_values('일강수량 정렬')
     
@@ -66,12 +66,12 @@ def rain():
         st.write(f'{industry}의 평균 매출액 데이터프레임')
         average_revenues_df = pd.DataFrame({
             '일강수량 정렬': industry_average.index,
-            '평균 매출액(억)': industry_average.values
+            '평균 매출액(억)': [f'{v:.2f} 억' for v in industry_average.values] 
         })
         st.dataframe(average_revenues_df, width=800)
         
 def plot_for_industry_r(data, industry):
-    colors = ['black', 'orange', 'skyblue', 'mediumseagreen', 'yellow', 'blue']
+    colors = ['skyblue', 'lightgreen', 'lightcoral', 'lightsalmon', 'lightgrey', 'aquamarine']
     # 그래프 생성
     fig, ax = plt.subplots()
     ax.bar(data.index, data.values, color=colors)  # 수정된 부분

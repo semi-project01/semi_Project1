@@ -42,7 +42,7 @@ def desc():
     # 그래프 생성
     plt.figure(figsize=(12, 8))
     bar_width = 0.09
-    colors = ['black', 'orange', 'skyblue', 'mediumseagreen', 'yellow', 'blue', 'chocolate', 'orchid']
+    colors = ['skyblue', 'lightgreen', 'lightcoral', 'lightsalmon', 'lightgrey', 'aquamarine', 'orchid', 'chocolate']
 
     # 그룹화된 바 그래프 생성
     for i, industry in enumerate(industry_list):
@@ -61,7 +61,7 @@ def desc():
     x = range(len(x_labels))
     plt.xticks(x, x_labels, fontproperties=fontprop)
     plt.xlabel('바람 세기 범위', fontproperties=fontprop)
-    plt.ylabel('평균 매출액 (단위: 10억원)', fontproperties=fontprop)
+    plt.ylabel('평균 매출액 (단위: 1억원)', fontproperties=fontprop)
     plt.legend(prop=fontprop)
     plt.tight_layout()
     

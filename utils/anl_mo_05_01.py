@@ -44,7 +44,7 @@ def desc():
     # 그래프 생성
     plt.figure(figsize=(12, 8))
     bar_width = 0.09
-    colors = ['black', 'orange', 'skyblue', 'mediumseagreen', 'yellow', 'blue', 'chocolate', 'orchid']
+    colors = ['skyblue', 'lightgreen', 'lightcoral', 'lightsalmon', 'lightgrey', 'aquamarine', 'orchid', 'chocolate']
 
     # 그룹화된 바 그래프 생성
     for i, industry in enumerate(industry_list):
