@@ -6,7 +6,7 @@ from utils import anl_mo_02_03 as am0203
 
 def app():
 	st.write('''
-		## 3년치 강수량&온도&풍속의 흐름
+		## 2018-2019 강수량&풍속&기온의 흐름
 		'''
 		)
 

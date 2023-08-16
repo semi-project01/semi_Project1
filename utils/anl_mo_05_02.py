@@ -5,7 +5,7 @@ from matplotlib import font_manager
 import streamlit as st
 
 def desc02():
-    font_path = r'NanumGothic.ttf'
+    font_path = 'C:/Windows/Fonts/NanumGothic.ttf'
     fontprop = font_manager.FontProperties(fname=font_path, size=10)
 
     # 데이터 로드
