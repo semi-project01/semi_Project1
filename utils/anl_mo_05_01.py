@@ -36,10 +36,10 @@ def desc():
     filtered_df = selected_df[selected_df['업종_분류'].isin(industry_list)]
 
     # 업종_분류별 바람 세기 범위와 매출 평균 계산
-    windspeed_sales = filtered_df.groupby(['업종_분류', '기온_범위'])['이용금액'].mean().reset_index()
+    temperatures_sales = filtered_df.groupby(['업종_분류', '기온_범위'])['이용금액'].mean().reset_index()
 
     # 1e9로 나누어서 표시
-    windspeed_sales['이용금액'] = windspeed_sales['이용금액'] / 1e9
+    temperatures_sales['이용금액'] = temperatures_sales['이용금액'] / 1e8
 
     # 그래프 생성
     plt.figure(figsize=(12, 8))
@@ -48,7 +48,7 @@ def desc():
 
     # 그룹화된 바 그래프 생성
     for i, industry in enumerate(industry_list):
-        industry_data = windspeed_sales[windspeed_sales['업종_분류'] == industry]
+        industry_data = temperatures_sales[temperatures_sales['업종_분류'] == industry]
         x = range(len(industry_data['기온_범위']))
         bars = plt.bar([pos + (i - (len(industry_list) - 1) / 2) * bar_width for pos in x],
                        industry_data['이용금액'], width=bar_width, label=industry, alpha=0.8, color=colors[i])
@@ -64,8 +64,13 @@ def desc():
     plt.xticks(x, x_labels, fontproperties=fontprop)
 
     plt.xlabel('평균 기온 범위', fontproperties=fontprop)
-    plt.ylabel('평균 매출액 (단위: 10억원)', fontproperties=fontprop)
+    plt.ylabel('평균 매출액 (단위: 1억원)', fontproperties=fontprop)
     plt.legend(prop=fontprop)
     plt.tight_layout()
 
     st.pyplot(plt)
+    def format_currency(amount):
+        return f'{amount:.2f} 억'
+    temperatures_sales['이용금액(억)'] = temperatures_sales['이용금액'].apply(format_currency)
+    st.write("최대풍속 별 업종별 매출액 데이터")
+    st.dataframe(temperatures_sales.set_index('업종_분류')[['기온_범위', '이용금액(억)']], width=800)

@@ -38,7 +38,7 @@ def desc():
     rainfall_sales = filtered_df.groupby(['업종_분류', '강수량_범위'])['이용금액'].mean().reset_index()
 
     # 1e9로 나누어서 표시
-    rainfall_sales['이용금액'] = rainfall_sales['이용금액'] / 1e9
+    rainfall_sales['이용금액'] = rainfall_sales['이용금액'] / 1e8
     
     # 그래프 생성
     plt.figure(figsize=(12, 8))
@@ -65,10 +65,15 @@ def desc():
         x_labels = ['매우 약한 강수', '약한 강수', '보통의 강수', '강한 강수', '매우 강한 강수']
         x = range(len(x_labels))
         plt.xticks(x, x_labels, fontproperties=fontprop)
-        
         plt.xlabel('강수량 범위 (단위: 10억원)', fontproperties=fontprop)
         plt.ylabel('평균 매출액', fontproperties=fontprop)
         plt.legend(prop=fontprop)
         plt.tight_layout()
         
     st.pyplot(plt)
+    
+    def format_currency(amount):
+        return f'{amount:.2f} 억'
+    rainfall_sales['이용금액(억)'] = rainfall_sales['이용금액'].apply(format_currency)
+    st.write("강수량 별 업종별 매출액 데이터")
+    st.dataframe(rainfall_sales.set_index('업종_분류')[['강수량_범위', '이용금액(억)']], width=800)
