@@ -10,7 +10,7 @@ fontprop = font_manager.FontProperties(fname=font_path, size=10)
 
 name_list = ['한림읍', '애월읍', '제주시', '조천읍', '구좌읍', '성산읍', '표선면', '남원읍', '서귀포시',
              '중문', '안덕면', '대정읍', '한경면', '추자도', '우도면']
-industry_list = ['골프장 운영업', '소매업', '숙박업', '스포츠 관련 업종', '오락\(관광\) 및 여가', '요식업', '유흥업소', '운송업']
+industry_list = ['골프장 운영업', '소매업', '숙박업', '스포츠 관련 업종', '오락(관광) 및 여가', '요식업', '유흥업소', '운송업']
 
 def get():
     def plot_for_industry_t(data, industry):
