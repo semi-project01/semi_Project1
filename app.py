@@ -44,5 +44,5 @@ elif item == '분석 04 - 풍속 및 업종별 매출 비교':
     a4.app()
 elif item == '분석 05 - 기온 및 업종별 매출 비교':
     a5.app()
-elif item == '분석 06':
+elif item == '분석 06- 기온에 따른 업종별 매출 변화':
     a6.app()
