@@ -3,6 +3,7 @@ from page import intro as it
 from page import se_1 as s1
 from page import page_env as penv
 from page import manual_page as man
+from page import purpose as pu
 from page import anl_01 as a1
 from page import anl_02 as a2
 from page import anl_03 as a3
@@ -13,7 +14,7 @@ from page import rain_page as a7
 from page import wind_page as a8
 from page import diagram as di
 
-item_name = ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','프로젝트 diagram','조사목적', 
+item_name = ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','프로젝트 diagram','조사 목적', 
               '분석 01 - 데이터 및 전체 매출 확인',
               '분석 02 - 연도별 날씨 변화',
               '분석 03 - 강수량 및 업종별 매출 비교',
@@ -37,9 +38,8 @@ elif item == 'streamlit 매뉴얼':
 
 elif item == '프로젝트 diagram':
     di.app()
-
-# elif item == '조사 목적':
-#     pass
+elif item == '조사 목적':
+    pu.app()
 elif item == '분석 01 - 데이터 및 전체 매출 확인':
     a1.app()
 elif item == '분석 02 - 연도별 날씨 변화':
