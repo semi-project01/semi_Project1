@@ -11,6 +11,7 @@ from page import anl_05 as a5
 from page import anl_06 as a6
 from page import rain_page as a7
 from page import wind_page as a8
+from page import diagram as di
 
 item_name = ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','프로젝트 diagram','조사목적', 
               '분석 01 - 데이터 및 전체 매출 확인',
@@ -34,8 +35,9 @@ elif item == '가상환경 구축 매뉴얼':
 elif item == 'streamlit 매뉴얼':
     man.app()
 
-# elif item == '프로젝트 diagram':
-#     pass
+elif item == '프로젝트 diagram':
+    di.app()
+
 # elif item == '조사 목적':
 #     pass
 elif item == '분석 01 - 데이터 및 전체 매출 확인':
