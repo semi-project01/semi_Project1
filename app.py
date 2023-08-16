@@ -11,7 +11,7 @@ from page import anl_01 as a1
 from page import se_3 as s3
 
 
-item = st.sidebar.selectbox('항목을 골라요.', ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','프로젝트 diagram','조사목적', '분석 01','분석 02','분석 03','분석 04','분석 05','분석 06'] )
+item = st.sidebar.selectbox('항목을 골라요.', ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','프로젝트 diagram','조사목적', '분석 01 - 데이터 및 전체 매출 확인','분석 02','분석 03','분석 04','분석 05','분석 06'] )
 
 
 
@@ -30,7 +30,7 @@ elif item == 'streamlit 매뉴얼':
 #     pass
 # elif item == '조사 목적':
 #     pass
-elif item == '분석 01':
+elif item == '분석 01 - 데이터 및 전체 매출 확인':
     a1.app()
 elif item == '분석 02':
     pass
