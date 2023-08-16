@@ -9,6 +9,10 @@ from page import page_env as penv
 from page import manual_page as man
 from page import anl_01 as a1
 from page import se_3 as s3
+from page import anl_02 as a2
+from page import anl_03 as a3
+from page import anl_04 as a4
+from page import anl_05 as a5
 
 
 item = st.sidebar.selectbox('항목을 골라요.', ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','프로젝트 diagram','조사목적', '분석 01 - 데이터 및 전체 매출 확인','분석 02','분석 03','분석 04','분석 05','분석 06'] )
@@ -33,12 +37,12 @@ elif item == 'streamlit 매뉴얼':
 elif item == '분석 01 - 데이터 및 전체 매출 확인':
     a1.app()
 elif item == '분석 02':
-    pass
-# elif item == '분석 03':
-#     pass
-# elif item == '분석 04':
-#     pass
-# elif item == '분석 05':
-#     pass
+    a2.app()
+elif item == '분석 03':
+    a3.app()
+elif item == '분석 04':
+    a4.app()
+elif item == '분석 05':
+    a5.app()
 # elif item == '분석 06':
 #     pass
