@@ -18,8 +18,8 @@ def total_check():
     st.write(df.shape)
     st.write('-- 1603367행, 9열 구성 확인')
 
-    st.markdown('<span style= "font-size: 20px; font-weight: bold;">[데이터프레인 내용 확인]</span>', unsafe_allow_html=True)
-    st.dataframe(df.info())
+    # st.markdown('<span style= "font-size: 20px; font-weight: bold;">[데이터프레인 내용 확인]</span>', unsafe_allow_html=True)
+    # st.dataframe(df.info())
     
     st.markdown('<span style= "font-size: 20px; font-weight: bold;">[데이터프레임의 기술 통계 정보 확인]</span>', unsafe_allow_html=True)
     st.write(df.describe())

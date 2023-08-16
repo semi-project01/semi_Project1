@@ -13,6 +13,7 @@ from page import anl_06 as a6
 from page import rain_page as a7
 from page import wind_page as a8
 from page import diagram as di
+from page import seaseon as se
 
 item_name = ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴얼','프로젝트 diagram','조사 목적', 
               '분석 01 - 데이터 및 전체 매출 확인',
@@ -22,7 +23,9 @@ item_name = ['intro','목차', '가상환경 구축 매뉴얼','streamlit 매뉴
               '분석 05 - 기온 및 업종별 매출 비교',
               '분석 06 - 기온에 따른 업종별 매출 변화',
               '분석 07 - 강수량에 따른 업종별 매출 변화',
-              '분석 08 - 풍속에 따른 업종별 매출 변화']
+              '분석 08 - 풍속에 따른 업종별 매출 변화',
+              '분석 09 - 계절에 따른 업종별 매출 변화'
+              ]
 item = st.sidebar.selectbox('항목을 고르세요.', item_name)
 
 if item == 'intro':
@@ -56,3 +59,5 @@ elif item == '분석 07 - 강수량에 따른 업종별 매출 변화':
     a7.app()
 elif item == '분석 08 - 풍속에 따른 업종별 매출 변화':
     a8.app()
+elif item == '분석 09 - 계절에 따른 업종별 매출 변화':
+    se.app()
