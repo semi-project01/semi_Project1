@@ -74,11 +74,17 @@ def desc02():
     create_wind_sales_graph(selected_df_2018, 2018)
     st.pyplot()
     st.write("2018년 데이터 표")
-    st.dataframe(selected_df_2018.set_index('일자')[['최대 풍속', '업종_분류', '이용금액']], width=800)
+    # 업종별로 최대풍속과 이용금액의 평균 계산
+    avg_wind_sales_2018 = selected_df_2018[selected_df_2018['업종_분류'].isin(industry_list)].groupby('업종_분류').agg({'최대 풍속': lambda x: f'{x.mean():.2f}', '이용금액': lambda x: f'{x.mean():.2f}'}).reset_index()
+    avg_wind_sales_2018.columns = ['업종_분류', '최대풍속(평균)', '이용금액(평균)']
+    st.dataframe(avg_wind_sales_2018, width=800)
 
     st.write("2019년 데이터")
     create_wind_sales_graph(selected_df_2019, 2019)
     st.pyplot()
     st.write("2019년 데이터 표")
-    st.dataframe(selected_df_2019.set_index('일자')[['최대 풍속', '업종_분류', '이용금액']], width=800)
+    # 업종별로 최대풍속과 이용금액의 평균 계산
+    avg_wind_sales_2019 = selected_df_2019[selected_df_2019['업종_분류'].isin(industry_list)].groupby('업종_분류').agg({'최대 풍속': lambda x: f'{x.mean():.2f}', '이용금액': lambda x: f'{x.mean():.2f}'}).reset_index()
+    avg_wind_sales_2019.columns = ['업종_분류', '최대풍속(평균)', '이용금액(평균)']
+    st.dataframe(avg_wind_sales_2019, width=800)
     
