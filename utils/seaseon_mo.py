@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 import seaborn as sns
@@ -63,7 +62,6 @@ def get():
         data_list.append(data)
 
     # 웹 어플리케이션
-    st.title('[계절에 따른 업종별 매출 변화]')
     option = st.selectbox('원하는 지역을 선택해주세요', name_list)
 
     # 선택한 지역의 데이터프레임 출력

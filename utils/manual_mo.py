@@ -11,7 +11,7 @@ def manual_():
     - 인터랙티브한 기능을 제공하며, 다양한 method를 통해 text, 이미지, dataframe 등을 표현할 수 있다.
     
     #### 2.사용순서
-    - pip install streamlit 이라는 코드를 통해 설치를한다.
+    - pip install streamlit 이라는 명령어를 통해 설치를한다.
     
     - import streamlit as st 를 입력하여 해당 라이브러리를 불러온다.
     

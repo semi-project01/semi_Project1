@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
-import numpy as np
 import seaborn as sns
 
 font_path = 'C:/Windows/Fonts/NanumGothic.ttf'
@@ -63,7 +62,6 @@ def wind():
         data_list.append(data)
 
     # 웹 어플리케이션
-    st.title('최대 풍속에 따른 업종별 매출변화')
     option = st.selectbox('원하는 지역을 선택해주세요', name_list)
 
     # 선택한 지역의 데이터프레임 출력

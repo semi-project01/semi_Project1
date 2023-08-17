@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 import seaborn as sns
@@ -57,7 +56,6 @@ def result():
 
     # 웹 어플리케이션
     st.title('[결론]')
-    st.subheader('[계절에 따른 업종별 매출 변화]')
 
     # 선택한 업종별로 그래프 생성
     for industry in industry_list:

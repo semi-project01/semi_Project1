@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
-import numpy as np
 
 font_path = r'NanumGothic.ttf'
 fontprop = font_manager.FontProperties(fname=font_path, size=10)

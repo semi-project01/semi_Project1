@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Aug 10 13:38:30 2023
-
-@author: goldg
-"""
-
 import streamlit as st
 
 def desc():    
@@ -28,12 +21,12 @@ def desc():
             #conda create -n semiproject 
             'semiproject'라는 이름의 가상공간을 만듭니다.
 
-            #python=3.9 ipython
+            #python=3.9
             '3.9버전 파이썬'으로 설치를 진행합니다.
 
-            #numpy pandas matplotlib folium
-            필요한 라이브러리 4가지를 함께 설치를 진행합니다.
-            (numpy, pandas, matplotlib, folium)
+            #ipython, numpy pandas matplotlib folium
+            필요한 라이브러리 5가지를 함께 설치를 진행합니다.
+            (ipython, numpy, pandas, matplotlib, folium)
             ''')
     st.write('''semiproject이란 가상환경 이름으로 파이썬 버전을 정해주고, 설치하고자 하는 라이브러리들를 마지막 뒤에 적어줍니다.
              ''')
